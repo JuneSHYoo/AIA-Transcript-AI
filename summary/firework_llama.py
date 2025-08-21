@@ -35,12 +35,13 @@ resp = requests.post(
     data=json.dumps({
         "model": MODEL_ID,
         "messages": messages,
-        "max_tokens": 400,
+        "max_tokens": 5000,
         "temperature": 0.2,
         "top_p": 0.9,
         "frequency_penalty": 0.0,
         "presence_penalty": 0.0,
-        "stream": False
+        "stream": False,
+        "store": False
     }),
     timeout=120,
 )
